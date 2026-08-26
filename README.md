@@ -29,7 +29,7 @@
 
 <br><br>
 
-## 💠구동 영상
+## 💠[SD] 본인 파트 프로그램 구동 영상
 #### ZLSDSMC010 : 구매 오더(SO) 생성
 https://github.com/user-attachments/assets/b0fbd9b5-4cf3-4be1-989b-79fad7e59c82
 
