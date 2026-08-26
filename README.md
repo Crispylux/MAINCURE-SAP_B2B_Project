@@ -24,7 +24,7 @@
 
 <br><br>
 
-## 💠ERD
+## 💠[SD] TABLE - ERD
 <img width="3323" height="3571" alt="ERD" src="https://github.com/user-attachments/assets/eb1deb99-93d4-43c1-ae86-646712558a13" />
 
 <br><br>
