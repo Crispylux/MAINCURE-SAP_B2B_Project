@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>FI Module Interface Functions</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_FI_INTERFACETOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_FI_INTERFACE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_POST_MM_INVOICE</FUNCNAME>
+     <SHORT_TEXT>MM Invoice Posting to FI</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_MM_BELNR</PARAMETER>
+       <TYP>ZTMMG00190-BELNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_GJAHR</PARAMETER>
+       <TYP>ZTMMG00190-GJAHR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_STATUS</PARAMETER>
+       <TYP>CHAR1</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_MESSAGE</PARAMETER>
+       <TYP>BAPI_MSG</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_BELNR</PARAMETER>
+       <TYP>BELNR_D</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_GJAHR</PARAMETER>
+       <TYP>GJAHR</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_MM_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Accounting Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Fiscal Year</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Flag</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_MESSAGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message Text</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Accounting Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Fiscal Year</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

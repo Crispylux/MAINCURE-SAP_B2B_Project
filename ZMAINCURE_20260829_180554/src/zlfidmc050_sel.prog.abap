@@ -1,0 +1,37 @@
+*&---------------------------------------------------------------------*
+*& Include          ZLFIDMC050_SEL
+*&---------------------------------------------------------------------*
+SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-t01.
+
+  SELECT-OPTIONS :
+    so_bukrs FOR ztfic00120-bukrs,
+    so_monat FOR ztfic00120-monat,
+    so_clost FOR ztfic00120-close_tp,
+    so_bldat FOR ztfic00120-bldat.
+
+  PARAMETERS :
+    pa_gjahr TYPE ztfic00120-gjahr OBLIGATORY.
+
+  SELECTION-SCREEN BEGIN OF LINE.
+
+    SELECTION-SCREEN COMMENT 1(12) TEXT-r01.
+
+    SELECTION-SCREEN POSITION 15.
+    PARAMETERS pa_all RADIOBUTTON GROUP rg1 DEFAULT 'X'.
+    SELECTION-SCREEN COMMENT 17(6) TEXT-r02 FOR FIELD pa_all.
+
+    SELECTION-SCREEN POSITION 25.
+    PARAMETERS pa_temp RADIOBUTTON GROUP rg1. " 0 임시
+    SELECTION-SCREEN COMMENT 27(6) TEXT-r03 FOR FIELD pa_temp.
+
+    SELECTION-SCREEN POSITION 35.
+    PARAMETERS pa_post RADIOBUTTON GROUP rg1. " 1 전기완료
+    SELECTION-SCREEN COMMENT 37(6) TEXT-r04 FOR FIELD pa_post.
+
+    SELECTION-SCREEN POSITION 45.
+    PARAMETERS pa_revs RADIOBUTTON GROUP rg1. " 2 역전표
+    SELECTION-SCREEN COMMENT 47(6) TEXT-r05 FOR FIELD pa_revs.
+
+  SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN END OF BLOCK b1.

@@ -1,0 +1,61 @@
+*&---------------------------------------------------------------------*
+*& Include          ZLFICMC040_SEL
+*&---------------------------------------------------------------------*
+
+TABLES: ztfic00010,
+        ztfic00020,
+        ztfic00110.
+
+SELECTION-SCREEN BEGIN OF BLOCK b01 WITH FRAME TITLE TEXT-t01.
+
+*** 회사코드
+  SELECT-OPTIONS:
+    so_bukrs FOR ztfic00020-bukrs OBLIGATORY.
+
+*** 회계연도
+  PARAMETERS:
+    pa_gjahr TYPE ztfic00010-gjahr OBLIGATORY.
+
+*** 기간
+  SELECT-OPTIONS:
+    so_monat FOR ztfic00010-monat.
+
+*** 조회 유형
+  SELECTION-SCREEN SKIP 1.
+
+  SELECTION-SCREEN BEGIN OF LINE.
+
+    SELECTION-SCREEN COMMENT 1(12) text-s01.
+
+    SELECTION-SCREEN POSITION 15.
+    PARAMETERS pa_bs RADIOBUTTON GROUP rg1 DEFAULT 'X'.
+    SELECTION-SCREEN COMMENT 17(6) text-s02
+      FOR FIELD pa_bs.
+
+    SELECTION-SCREEN POSITION 30.
+    PARAMETERS pa_pl RADIOBUTTON GROUP rg1.
+    SELECTION-SCREEN COMMENT 32(6) text-s03
+      FOR FIELD pa_pl.
+
+  SELECTION-SCREEN END OF LINE.
+
+*** 전기금액 표시
+  SELECTION-SCREEN SKIP 1.
+
+  SELECTION-SCREEN BEGIN OF LINE.
+
+    SELECTION-SCREEN COMMENT 1(12) text-s04.
+
+    SELECTION-SCREEN POSITION 15.
+    PARAMETERS pa_yes RADIOBUTTON GROUP rg2 DEFAULT 'X'.
+    SELECTION-SCREEN COMMENT 17(6) text-s05
+      FOR FIELD pa_yes.
+
+    SELECTION-SCREEN POSITION 30.
+    PARAMETERS pa_no RADIOBUTTON GROUP rg2.
+    SELECTION-SCREEN COMMENT 32(6) text-s06
+      FOR FIELD pa_no.
+
+  SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN END OF BLOCK b01.
